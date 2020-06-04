@@ -36,7 +36,7 @@ namespace RestaurantOrders_LinkedList
             } while (resp != 4);
         }
 
-        static void PlaceOrder(ref LinkedList<string> head, ref LinkedList<string> tail)
+        static void PlaceOrder(ref LinkedList<string> head, ref LinkedList<string> tail) // O(1)
         {
             Console.WriteLine("What is the order?");
             var value = Console.ReadLine();
@@ -53,7 +53,7 @@ namespace RestaurantOrders_LinkedList
                 tail = tail.Next;
             }
         }
-        static void GetOrder(ref LinkedList<string> head)
+        static void GetOrder(ref LinkedList<string> head) // O(1)
         {
             if (head == null)
             {
@@ -66,7 +66,7 @@ namespace RestaurantOrders_LinkedList
             Console.WriteLine($"Your order is: {order}");
         }
 
-        static void PrintAllOrders(LinkedList<string> head)
+        static void PrintAllOrders(LinkedList<string> head) // O(n)
         {
             var t = head;
             if (t == null) { Console.WriteLine("\nThere's not orders avaliable\n"); return; }
