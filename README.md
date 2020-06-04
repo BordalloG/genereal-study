@@ -1,0 +1,1 @@
+# genereal-study
